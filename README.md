@@ -255,7 +255,7 @@ Enter the following command to allow HTTP traffic:
 ```bash
 sudo ufw allow http
 ```
->[!ERROR] Potential Errors May Occur:
+>[!IMPORTANT] Potential Errors May Occur:
 
 ```WARN: initcaps
 [Errno 2] iptables v1.8.10 (legacy): can't initialize iptables table `filter': Table does not exist (do you need to insmod?)
