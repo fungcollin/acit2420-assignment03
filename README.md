@@ -2,7 +2,7 @@
 
 ## Introduction 
 
-This repository will create and enable a .html file of syste minformation to automatically run everyday at 05:00 using a systemd service and timer. 
+This repository will teach you how to setup an index.html file to run a designated script at a determined time using systemd service and timer. It will also feature the use of nginx and UFW firewall enabling.
 
 ## Table of Contents
 
