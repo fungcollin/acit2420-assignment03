@@ -255,3 +255,62 @@ Enter the following command to allow HTTP traffic:
 ```bash
 sudo ufw allow http
 ```
+>[!ERROR] Potential Errors May Occur:
+
+```WARN: initcaps
+[Errno 2] iptables v1.8.10 (legacy): can't initialize iptables table `filter': Table does not exist (do you need to insmod?)
+Perhaps iptables or your kernel needs to be upgraded.
+```
+Potential Steps to Resolving Iptables Error (These were steps I had to perform to resolve my errors):
+- `sudo pacman -Syu`: To update your system
+- `sudo pacman -S linux`: Update/Install latest linux package
+- `sudo pacman -S linux-headers`: Update/Install latest linux-headers package
+- `sudo pacman -S iptables`: Update/Install latest iptables package
+- `sudo rystemctl restart iptables`: Restarts iptables
+- `sudo reboot`: Reboot droplet
+
+**STEP 3**: Enable SSH rate limiting:
+
+Enter the below command to limit the rate of SSH by blocking any connection after 6 attempts within 30 seconds:
+```bash
+sudo ufw limit ssh
+```
+
+**STEP 4**: Enable UFW
+
+Enter the below command to enable UFW:
+```bash
+sudo ufw enable
+```
+
+**STEP 5** Check UFW Status
+
+Enter the command below to check UFW status:
+```bash
+sudo ufw status
+```
+
+Results should reflect:
+```
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22                         LIMIT       Anywhere
+80                         ALLOW       Anywhere
+22 (v6)                    LIMIT       Anywhere (v6)
+80 (v6)                    ALLOW       Anywhere (v6)
+```
+
+### Task 4: Screenshot of Droplet 
+---
+
+Image Here
+
+### References:
+---
+[1]“2420-notes/week-eleven.md · main · cit_2420 / 2420-notes-F24 · GitLab,” GitLab, Nov. 19, 2024. https://gitlab.com/cit2420/2420-notes-f24/-/blob/main/2420-notes/week-eleven.md‌
+
+[2]“2420-notes/week-twelve.md · main · cit_2420 / 2420-notes-F24 · GitLab,” GitLab, Nov. 19, 2024. https://gitlab.com/cit2420/2420-notes-f24/-/blob/main/2420-notes/week-twelve.md
+
+[3]“nginx - ArchWiki,” Archlinux.org, 2020. https://wiki.archlinux.org/title/Nginx
