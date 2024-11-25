@@ -11,8 +11,8 @@ This repository will create and enable a .html file of syste minformation to aut
     - [Task 2: Create .service and .timer Scripts](#task-2-create-service-and-timer-scripts)
     - [Task 3: Modify nginx.conf](#task-3-modify-nginxconf)
     - [Task 4: UFW](#task-4-setup-ufw)
-    - [Task 5: Example Screenshot](#script-1-1-installation---installing-packages)
-- [References](#References)
+    - [Task 5: Example Screenshot](#task-5-screenshot-of-droplet)    
+- [References](#references)
 
 ## Assignment Instructions
 
@@ -303,7 +303,7 @@ To                         Action      From
 80 (v6)                    ALLOW       Anywhere (v6)
 ```
 
-### Task 4: Screenshot of Droplet 
+### Task 5: Screenshot of Droplet 
 ---
 
 Image Here
